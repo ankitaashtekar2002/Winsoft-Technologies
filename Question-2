@@ -23,7 +23,6 @@ public class MaximumSumPath {
             } else if (X[i] > Y[j]) {
                 sumY += Y[j++];
             } else {
-                // Found a common element
                 maxSum += Math.max(sumX, sumY) + X[i];
                 sumX = 0;
                 sumY = 0;
@@ -32,7 +31,6 @@ public class MaximumSumPath {
             }
         }
         
-        // Add the remaining elements
         while (i < X.length) {
             sumX += X[i++];
         }
